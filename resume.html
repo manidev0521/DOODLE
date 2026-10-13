@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manikandan A - Resume</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --page-bg: #eeeeee;
+            --resume-bg: #ffffff;
+            --text-color: #222222;
+            --heading-color: #233f60;
+            --border-color: #999999;
+            --shadow-color: #cccccc;
+            --link-color: #233f60;
+            --button-bg: #233f60;
+            --button-text: #ffffff;
+        }
+          
+  
+
+        body.dark-theme {
+            --page-bg: #121820;
+            --resume-bg: #1e2936;
+            --text-color: #e5e7eb;
+            --heading-color: #80b7ff;
+            --border-color: #526174;
+            --shadow-color: #080c12;
+            --link-color: #80b7ff;
+            --button-bg: #80b7ff;
+            --button-text: #121820;
+        }
+
+        body {
+            font-family: "Times New Roman", serif;
+            background: var(--page-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 25px;
+            line-height: 1.5;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .resume {
+            max-width: 800px;
+            margin: auto;
+            padding: 35px;
+            background: var(--resume-bg);
+            color: var(--text-color);
+            box-shadow: 0 0 10px var(--shadow-color);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .theme-controls {
+            max-width: 800px;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        button {
+            padding: 3px 12px;
+            background: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            margin: 5px;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--heading-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        header h3 {
+            margin: 5px;
+        }
+
+        header p {
+            font-size: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        .profile-photo {
+            display: block;
+            width: 150px;
+            height: 170px;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            margin: 32px auto;
+
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: var(--heading-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 22px;
+        }
+
+        h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        p, li {
+            font-size: 13px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .resume {
+                padding: 20px;
+            }
+        }
+
+        @media print {
+            body,
+            body.dark-theme {
+                --page-bg: #ffffff;
+                --resume-bg: #ffffff;
+                --text-color: #222222;
+                --heading-color: #233f60;
+                --border-color: #999999;
+                --shadow-color: transparent;
+                --link-color: #233f60;
+                --button-bg: #ffffff;
+                --button-text: #222222;
+
+                background: #ffffff;
+                color: #222222;
+                padding: 0;
+            }
+
+            .resume {
+                max-width: none;
+                padding: 15px;
+                box-shadow: none;
+            }
+
+            .theme-controls {
+                display: none;
+            }
+
+            a {
+                color: #233f60;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="resume">
+         <img src="photo..jpg"
+                 alt="Manikandan Resume Photo"
+                 class="profile-photo" align="right">
+
+
+
+        <header>
+            <div class="theme-controls">
+        <button type="button" id="themeToggle"
+                onclick="toggleTheme()">
+             Dark Mode
+        </button>
+        <button type="button" onclick="window.print()">
+            Print Resume
+
+    </div>
+
+            <h1>MANIKANDAN A</h1>
+            <h3>Software Engineer</h3>
+
+           
+            <p>
+                +91-9710835979 |
+                <a href="mailto:a.manikandan211205@gmail.com">
+                    a.manikandan211205@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <a href="https://github.com/manidev0521"
+                   target="_blank">GitHub</a> |
+                <a href="https://linkedin.com/in/manikandan05"
+                   target="_blank">LinkedIn</a>
+            </p>
+        </header>
+
+        <section>
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p>
+                Motivated and detail-oriented Software Engineer with a strong
+                foundation in programming, problem-solving, and web development.
+                Passionate about building efficient, scalable applications and
+                eager to contribute to a collaborative engineering team.
+            </p>
+        </section>
+
+        <section>
+            <h2>TECHNICAL SKILLS</h2>
+            <p><b>Languages:</b> Java, Python</p>
+            <p><b>Web:</b> HTML, CSS, React</p>
+            <p><b>Databases:</b> MySQL, MongoDB</p>
+            <p><b>Tools:</b> Git, GitHub, VS Code</p>
+            <p><b>Concepts:</b> OOP, Data Structures</p>
+        </section>
+
+        <section>
+            <h2>PROJECTS</h2>
+
+            <h3>Corpulse Learn – Intelligent Workforce Learning &amp;
+                Assessment Platform</h3>
+            <p><b>Technologies:</b> React.js, Node.js, MongoDB</p>
+            <ul>
+                <li>Developed Admin, Manager and Employee modules using React.js.</li>
+                <li>Designed dashboards, course management, assessments and weekly reports.</li>
+                <li>Collaborated on ML-based burnout prediction functionality.</li>
+                <li>Integrated REST APIs built with Node.js and MongoDB.</li>
+            </ul>
+
+            <h3>Stock Maintenance System</h3>
+            <p><b>Technologies:</b> Java, MySQL, HTML, CSS</p>
+            <ul>
+                <li>Developed a web application to manage inventory and transactions.</li>
+                <li>Implemented CRUD operations with role-based access.</li>
+                <li>Built search and filter functionality.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>INTERNSHIP</h2>
+            <h3>Flutter Frontend Developer Intern</h3>
+            <p>Amihive Software Solutions | 20 May 2026 – 20 June 2026</p>
+            <ul>
+                <li>Developed responsive Flutter UI screens and reusable widgets.</li>
+                <li>Worked on API integration, UI/UX fixes, testing and code reviews.</li>
+                <li>Followed Flutter best practices and clean code standards.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>EDUCATION</h2>
+            <h3>Bachelor of Engineering – Computer Science and Engineering</h3>
+            <p>S A Engineering College | 82%</p>
+
+            <h3>Higher Secondary Education</h3>
+            <p>M S J M Hindhu Vidhyalayaa Matric Higher Secondary School | 84%</p>
+        </section>
+
+        <section>
+            <h2>CERTIFICATIONS</h2>
+            <ul>
+                <li>MATLAB Programming Certification</li>
+                <li>AWS Cloud Fundamentals Certification</li>
+                <li>AWS Certified Cloud Practitioner</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>SOFT SKILLS</h2>
+            <ul>
+                <li>Problem-solving &amp; Analytical Thinking</li>
+                <li>Team Collaboration</li>
+                <li>Quick Learner</li>
+                <li>Effective Communication</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.getElementById("themeToggle");
+
+            body.classList.toggle("dark-theme");
+
+            if (body.classList.contains("dark-theme")) {
+                button.textContent = " Light Mode";
+            } else {
+                button.textContent = " Dark Mode";
+            }
+        }
+    </script>
+
+</body>
+</html>
